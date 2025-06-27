@@ -15,15 +15,15 @@ public class EmailService {
                 .setHostname("smtp.gmail.com")
                 .setPort(587)
                 .setStarttls(StartTLSOptions.REQUIRED)
-                .setUsername("23dtsa03@kristujayanti.com")         // ✅ Your Gmail address
-                .setPassword("ciiu ozuc mbss jrcf");   // ✅ Paste your app password here
+                .setUsername("YOUR_MAIL_HERE")         // ✅ Your Gmail address
+                .setPassword("YOUR_GAPP_PASS");   // ✅ Paste your app password here
 
         mailClient = MailClient.createShared(vertx, config, "email-pool");
     }
 
     public void sendPasswordEmail(String to, String password) {
         MailMessage message = new MailMessage()
-                .setFrom("23dtsa03@kristujayanti.com")
+                .setFrom("SAME_MAIL_AGAIN")
                 .setTo(to)
                 .setSubject("Your Course Registration Password")
                 .setText("Welcome! Your password for course registration is: " + password);
